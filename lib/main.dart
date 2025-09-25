@@ -203,6 +203,19 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     });
     _savePoints();
   }
+  void _decrementRed(int value) {
+    setState(() {
+      redPoints -= value;
+    });
+    _savePoints();
+  }
+
+  void _decrementBlue(int value) {
+    setState(() {
+      bluePoints -= value;
+    });
+    _savePoints();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -265,18 +278,18 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                               child: const Text("1"),
                                             ),
                                           ),
-                                          const SizedBox(width: 5),
+                                          const SizedBox(width: 4),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _decrementBlue(1),
+                                              child: const Text("-1"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 4),
                                           Expanded(
                                             child: ElevatedButton(
                                               onPressed: () => _incrementBlue(2),
                                               child: const Text("2"),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 5),
-                                          Expanded(
-                                            child: ElevatedButton(
-                                              onPressed: () => _incrementBlue(3),
-                                              child: const Text("3"),
                                             ),
                                           ),
                                         ],
@@ -310,18 +323,18 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                               child: const Text("1"),
                                             ),
                                           ),
-                                          const SizedBox(width: 5),
+                                          const SizedBox(width: 4),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _decrementRed(1),
+                                              child: const Text("-1"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 4),
                                           Expanded(
                                             child: ElevatedButton(
                                               onPressed: () => _incrementRed(2),
                                               child: const Text("2"),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 5),
-                                          Expanded(
-                                            child: ElevatedButton(
-                                              onPressed: () => _incrementRed(3),
-                                              child: const Text("3"),
                                             ),
                                           ),
                                         ],
