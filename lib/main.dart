@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -57,6 +58,13 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       allowFullScreen: true,
       allowMuting: true,
       allowPlaybackSpeedChanging: true,
+      deviceOrientationsOnEnterFullScreen: [
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ],
+      deviceOrientationsAfterFullScreen: [
+        DeviceOrientation.portraitUp,
+      ],
     );
 
     setState(() {});
@@ -248,7 +256,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
                         // Overlay scoreboard buttons
                         Positioned(
-                          bottom: -10,
+                          bottom: 50,
                           left: 10,
                           right: 10,
                           child: Row(
