@@ -238,83 +238,96 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                           bottom: -10,
                           left: 10,
                           right: 10,
-                          child: Column(
+                          child: Row(
                             children: [
                               // Blue team overlay
-                              Container(
-                                color: Colors.blue.withOpacity(0.3),
-                                padding: const EdgeInsets.all(8),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "$bluePoints",
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
+                              Expanded(
+                                child: Container(
+                                  color: Colors.blue.withOpacity(0.3),
+                                  padding: const EdgeInsets.all(8),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "$bluePoints",
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        ElevatedButton(
-                                          onPressed: () => _incrementBlue(1),
-                                          child: const Text("+1"),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        ElevatedButton(
-                                          onPressed: () => _incrementBlue(2),
-                                          child: const Text("+2"),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        ElevatedButton(
-                                          onPressed: () => _incrementBlue(3),
-                                          child: const Text("+3"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementBlue(1),
+                                              child: const Text("1"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 5),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementBlue(2),
+                                              child: const Text("2"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 5),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementBlue(3),
+                                              child: const Text("3"),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-
-                              const SizedBox(height: 8),
-
                               // Red team overlay
-                              Container(
-                                color: Colors.red.withOpacity(0.3),
-                                padding: const EdgeInsets.all(8),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "$redPoints",
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
+                              Expanded(
+                                child: Container(
+                                  color: Colors.red.withOpacity(0.3),
+                                  padding: const EdgeInsets.all(8),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "$redPoints",
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        ElevatedButton(
-                                          onPressed: () => _incrementRed(1),
-                                          child: const Text("+1"),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        ElevatedButton(
-                                          onPressed: () => _incrementRed(2),
-                                          child: const Text("+2"),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        ElevatedButton(
-                                          onPressed: () => _incrementRed(3),
-                                          child: const Text("+3"),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementRed(1),
+                                              child: const Text("1"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 5),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementRed(2),
+                                              child: const Text("2"),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 5),
+                                          Expanded(
+                                            child: ElevatedButton(
+                                              onPressed: () => _incrementRed(3),
+                                              child: const Text("3"),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
